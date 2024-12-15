@@ -1,0 +1,36 @@
+/** Primer ejercico **/
+.container {
+    white-space: nowrap;
+    display: inline-block; 
+}
+
+.imagen {
+    display: inline-block; 
+    width: 10%; 
+}
+
+.text {
+    display: inline-block; 
+    max-width: 80%; 
+    margin-left: 16px; 
+}
+
+/** Segundo ejercicio **/
+
+.tarjeta {
+    display: inline-block;
+    height: 250px;
+    width: 300px;
+    border: 1px solid black;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+h3, p {
+    font-size: 16px;
+    
+}
+
+.titulos {
+    margin-top: 90px;
+}
