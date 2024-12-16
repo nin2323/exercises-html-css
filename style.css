@@ -1,19 +1,24 @@
 /** Primer ejercico **/
-.container {
-    white-space: nowrap;
+/**.container {
     display: inline-block; 
 }
 
 .imagen {
     display: inline-block; 
     width: 10%; 
+    vertical-align: bottom;
 }
 
 .text {
     display: inline-block; 
     max-width: 80%; 
     margin-left: 16px; 
-}
+    font-family: sans-serif;
+    vertical-align: bottom;  
+    margin-bottom: 0px;   
+} **/
+
+
 
 /** Segundo ejercicio **/
 
@@ -24,6 +29,12 @@
     border: 1px solid black;
     margin-right: 20px;
     padding: 10px;
+    margin-bottom: 12px; 
+    text-align: left;  
+}
+
+.general {
+    text-align: center;
 }
 
 h3, p {
