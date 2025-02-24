@@ -1,0 +1,39 @@
+/* Ejercicio 1 */
+/* .totoro.guardian + .soot{
+    color: #ff69b4;
+    background: #ffe6f2; 
+    font-weight: bold;
+} */
+
+/* Ejercicio 2 */
+/* ~ este simbolo es un combinador de hermanos generales, selecciona todos los elementos que tiene el mismo padre y aparecen despues de el primer elemento especificado */
+/* .spirit ~ .contract {     
+     color: #9c27b0; 
+     background: #f3e5f5; 
+     border-left: 3px solid #9c27b0; 
+} */
+
+/* Ejercicio 3 */
+/* > para acceder a todos los hijos directos '.padre > .hijo' */
+/* .castle > .room {
+    border: 2px dashed #ff9800;
+    background: #fff3e0;
+    border-radius: 8px;
+    padding: 15px;
+} */
+
+/* Ejercicio 4 */
+/* .tree.sacred .kodama {
+    color: #4caf50;
+    background: #e8f5e9;
+    border: 2px solid #81c784; 
+    transform: rotate(5deg); 
+} */
+
+/* Ejercicio 5 */
+.wave.special > .jellyfish ~ .fish.magic {
+    color: #e91e63;
+    background: #fce4ec;
+    border-radius: 50%;
+    transform: translateY(-5px);
+}
