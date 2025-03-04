@@ -1,0 +1,27 @@
+.toggle__container{
+    display: inline-flex;
+    align-items: center;
+    width: 64px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    border: 1px solid black;
+  }
+  
+  .toggle__switch {
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+  }
+
+  .active {
+    background-color:red;
+    right: 3px;
+    left: unset;
+  }
