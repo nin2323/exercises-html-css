@@ -1,0 +1,195 @@
+/* Generales */
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.contain{
+    display: flex;
+    gap: 52px;
+}
+
+.card-gengar, .card-haunter, .card-gastly, .card-mewtwo {
+    width: 300px;
+    height: 500px;
+    border-radius: 6px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+    flex-direction: column; 
+    position: relative;
+    transition: 0.6s;
+}
+
+/* Gengar */
+
+.card-gengar {
+    opacity: 70%;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+p {
+    color: white;
+    font-size: 28px;
+}
+
+.card-gengar:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 100%;
+}
+
+/* Haunter */
+
+.card-haunter:hover {
+    cursor: pointer;
+    transform: perspective(900px) rotateX(25deg);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.card-haunter::before,
+.card-haunter::after {
+	content: "";
+	opacity: 0;
+	width: 100%;
+	height: 80px;
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+}
+.card-haunter::before {
+	top: 0;
+	height: 100%;
+	background-image: linear-gradient(
+		to top,
+		transparent 46%,
+		rgba(12, 13, 19, 0.5) 68%,
+		rgba(12, 13, 19, 0.712) 97%
+	);
+}
+.card-haunter::after {
+	bottom: 0;
+	opacity: 1;
+	background-image: linear-gradient(
+		to bottom,
+		transparent 46%,
+		rgba(12, 13, 19, 0.5) 68%,
+		rgba(12, 13, 19) 97%
+	);
+}
+
+.haunter-wrapped:hover .card-haunter::before,
+.card-haunter::after {
+	opacity: 1;
+}
+
+.card:hover .wrapper::after {
+	height: 120px;
+}
+
+.haunter-3d {
+    position: absolute;
+    width: 450px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 100;
+    overflow: visible;
+    bottom: -100px;
+}
+
+.card-haunter:hover .haunter-3d {
+    cursor: pointer;
+    opacity: 1;
+	transform: translate3d(0%, -30%, 600px);
+}
+
+/* Gastly */
+
+.card-gastly-contenedor:hover .card-gastly {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card-gastly-contenedor {
+    perspective: 1000px;
+    width: 300px;
+    height: 500px;
+}
+
+.cara-delantera {
+    backface-visibility: hidden;
+}
+
+.cara-trasera {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.cara {
+    position: absolute;
+    width: 100%;
+    height: 100%;  
+    overflow: hidden;
+    border-radius: 6px; 
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.cara img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-gastly {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.9s;
+}
+    
+.cara p {
+    color: white;
+    font-size: 28px;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Mewtwo */
+
+.card-mewtwo {
+    overflow: hidden;
+    box-shadow: none;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
+    transform-style: preserve-3d;
+}
+
+.card-mewtwo:hover {
+    transform: perspective(1000px) rotateX(15deg) rotateY(15deg); /* Rotación de la carta */
+    box-shadow: -20px -20px 30px rgba(0, 0, 0, 0.4); /* Sombra invertida (al lado contrario de la inclinación) */
+}
+
+
+
+
+
+
+
