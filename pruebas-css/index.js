@@ -1,3 +1,5 @@
+// Mewtwo
+
 const card = document.querySelector('.card-mewtwo');
 
 card.addEventListener('mousemove', (event) => {
@@ -22,5 +24,54 @@ card.addEventListener('mouseleave', () => {
     card.style.boxShadow = `none`; 
 });
 
+// Magikarp y Gyarados
 
+const magikarp = document.querySelector('.card-magikarp');
+const gyarados = document.querySelector('.card-gyarados')
+
+magikarp.addEventListener('click', () => {
+    magikarp.classList.toggle('hidden');
+    gyarados.classList.toggle('hidden');
+    magikarp.classList.add('explode');  
+    gyarados.classList.add('explode');  
+    setTimeout(() => {
+        magikarp.classList.remove('explode');  
+        gyarados.classList.remove('explode');  
+    }, 1500);
+});
+
+gyarados.addEventListener('click', () => {
+    magikarp.classList.toggle('hidden');
+    gyarados.classList.toggle('hidden');
+    magikarp.classList.add('explode');  
+    gyarados.classList.add('explode');  
+    setTimeout(() => {
+        magikarp.classList.remove('explode');  
+        gyarados.classList.remove('explode');  
+    }, 1500);
+});
+
+// magikarp.addEventListener('click', ()=> {
+//     magikarp.classList.toggle('hidden');
+//     gyarados.classList.toggle('hidden');
+
+//     // magikarp.style.transform = 'translateX(-300px) rotateY(90deg)';
+//     // magikarp.style.opacity = '0';
+
+//     // setTimeout(() => {
+//     //     magikarp.classList.add('hidden');
+//     //     magikarp.classList.remove('hidden');
+//     //     gyarados.style.transform = 'translateX(300px) rotateY(-90deg)';
+
+//     //     setTimeout(() => {
+//     //         gyarados.style.transform = 'translateX(0) rotateY(0)';
+//     //         gyarados.style.opacity = '1';
+//     //     },100);
+//     // },500);
+// });
+
+// gyarados.addEventListener('click', ()=> {
+//     magikarp.classList.toggle('hidden');
+//     gyarados.classList.toggle('hidden');
+// });
 
