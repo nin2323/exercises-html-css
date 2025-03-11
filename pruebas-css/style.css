@@ -200,7 +200,7 @@ p {
 
 .card-kadabra:hover {
     cursor: pointer;
-    animation: glitch 0.5s;
+    animation: glitch 0.5s infinite;
 }
 
 @keyframes glitch {
