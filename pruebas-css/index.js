@@ -11,17 +11,27 @@ card.addEventListener('mousemove', (event) => {
     const rotateX = ((y / cardPosition.height) - 0.5) * -60;
     const rotateY = ((x / cardPosition.width) - 0.5) * 60;
 
-    const shadowX = (rotateY / 2); 
+    const shadowX = -(rotateY / 2); 
     const shadowY = (rotateX / 2);
 
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    card.style.boxShadow = `${shadowX}px ${shadowY}px 20px rgba(0, 0, 0, 0.3)`; // Aplica el box-shadow
+    card.style.boxShadow = `${shadowX}px ${shadowY}px 20px rgba(0, 0, 0, 0.71)`; // Aplica el box-shadow
 
+    const glowX = -(rotateY / 2);
+    const glowY = (rotateX / 2);
+
+    const glow = `radial-gradient(circle at ${50 + glowX}% ${50 + glowY}%, 
+                  rgba(238, 203, 8, 0.3), transparent 90%)`;
+
+    // Aplicamos el brillo dinámico al pseudo-elemento ::after
+    card.style.setProperty('--glow', glow);
+    card.querySelector('::after').style.background = glow;
 });
 
 card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
     card.style.boxShadow = `none`; 
+    card.style.setProperty('--glow', 'transparent');
 });
 
 // Magikarp y Gyarados
